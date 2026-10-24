@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: adjudication-service
+  datasource:
+    url: jdbc:postgresql://localhost:5435/adjudication
+    username: platform
+    password: platform
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  kafka:
+    bootstrap-servers: localhost:9096
+  rabbitmq:
+    host: localhost
+    port: 5675
+    username: platform
+    password: platform
+    listener:
+      simple:
+        default-requeue-rejected: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health

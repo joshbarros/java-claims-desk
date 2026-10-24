@@ -1,0 +1,2 @@
+CREATE DATABASE intake;
+CREATE DATABASE adjudication;
